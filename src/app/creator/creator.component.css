@@ -1,0 +1,13 @@
+img{
+    border-radius: 50%; 
+    width: 200px;
+}
+
+.creator-name 
+    {
+        font-size : 30px;
+    }
+.creator-role {
+    color: #b3b3b3;
+    letter-spacing: .2em;
+} 

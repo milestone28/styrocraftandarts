@@ -1,0 +1,8 @@
+img {
+    max-width: 100%;
+}
+
+.w-slider {
+    width: 100% !important;
+    height: 90vh;
+  }

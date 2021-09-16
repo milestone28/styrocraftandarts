@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12 ">
+        <h2 class="text-center">Menu</h2>
+    </div>
+
+    <div class="col-md-12">
+        <p class="text-center">Free Website Template For Restaurants Made by Colorlib</p>
+    </div>
+
+    <div class="col-md-12">
+        <div *ngFor='let product of productList'>
+
+            <div class="row">
+                <div class="col-md-3"> 
+                    <img src="{{product.picture}}" alt="{{product.name}}">
+                </div>
+
+                <div class="col-md-7">
+                    <h3>{{product.name}}</h3>
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="col">
+                    P{{product.price}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
