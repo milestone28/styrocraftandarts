@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { features } from '../mocks';
 @Component({
   selector: 'app-features',
@@ -11,6 +11,8 @@ export class FeaturesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
 
 }

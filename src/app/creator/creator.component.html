@@ -1,20 +1,15 @@
 
   <div class="row text-center">
     <div class="col-12" >
-        <h2 class="display-5 pb-5 mb-5">Meet the Crafters and Artist</h2>
+        <h2 class="display-5 pb-5 mb-5 animation-h">Meet the Crafters and Artist</h2>
     </div>
 
-    <div class="col-md-6 col-sm-12 m-auto" *ngFor='let creator of creatorList  let i=index' id="creator">
+    <div class="col-md-6 col-sm-12 m-auto p-3" *ngFor='let creator of creatorList  let i=index' id="creator">
 
-      <div class="col-12 creator-picture p-2"><img src="{{creator.picture}}" alt=""></div>
+      <div class="col-12 creator-picture p-2 "><img class="border border-3 border-animation  inline-photo show-on-scroll-creator" src="{{creator.picture}}" alt="" id="animate-image-creator"></div>
       <div class="col-12 creator-name">{{creator.name}}</div>
-      <div class="col-12 creator-role">{{creator.role}}</div>
+      <div class="col-12 "><p class="creator-role">{{creator.role}}</p></div>
       <div class="col-12 creator-description">{{creator.description}}</div>
-      <div class="col-12 creator-social">
-        <span style="color: Dodgerblue;" class="mt-3 pb-5 ml-2 mr-2 d-inline-block"><a href="{{creator.facebook}}" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></span>
-        <span> {{creator.twitter}}</span>
-        <span> {{creator.instagram}}</span>
-      </div>
 
     </div>
 

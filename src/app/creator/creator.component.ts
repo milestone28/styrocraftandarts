@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { creators } from '../../app/mocks/index';
 
 @Component({
@@ -15,6 +15,9 @@ export class CreatorComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
   }
+
+
 
 }

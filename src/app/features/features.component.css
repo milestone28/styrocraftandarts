@@ -2,8 +2,26 @@
     display: block;
     max-width: 100%;
     height: 350px;
+    transition: all 0.3s;
   }
+.img-feature:hover {
+animation: shake;
+animation: shake 0.5s linear 1;
+animation-fill-mode: forwards;
+
+}
+
+@keyframes shake {
+  33% {transform : rotate(5deg);}
+  66% {transform: rotate(-5deg);}
+  100% {transform: rotate(5deg);}
+}
 
   .card-text{
     letter-spacing: .2em;
   }
+
+
+.container:hover .caption {
+  opacity: 1;
+}
