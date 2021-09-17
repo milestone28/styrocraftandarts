@@ -8,7 +8,8 @@ import { Component, OnInit, HostListener, } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   show : boolean;
-  countDown : number;
+  public countDown : number = 0;
+  
   constructor() {
     
    }
@@ -17,16 +18,25 @@ export class NavBarComponent implements OnInit {
     document.querySelectorAll(".nav-link")[0].addEventListener("click",this.hideMenu);
     document.querySelectorAll(".nav-link")[1].addEventListener("click",this.hideMenu);
     document.querySelectorAll(".nav-link")[2].addEventListener("click",this.hideMenu);
+   
   }
 
 
+  // document.querySelectorAll("input.form-control")[0].addEventListener("click",()=>{});
 
-   hideMenu() {
-
-    document.getElementById("myClickMenu")?.click();
+  @HostListener("mouseenter")addTimeHover(){
+    this.countDown += 5000;
   }
 
-  
+  @HostListener("click")addTimeClick(){
+    this.countDown += 5000;
+  }
+
+ 
+
+
+
+
   @HostListener("document:scroll")
   scrollFunction(){
 
@@ -39,7 +49,18 @@ export class NavBarComponent implements OnInit {
      animationNavBar.classList.add('animate__animated', 'animate__bounceOutLeft')
     }
     else{
-      animationNavBar.classList.remove('animate__animated', 'animate__bounceOutLeft')
+      animationNavBar.classList.remove('animate__animated', 'animate__bounceOutLeft');
+  
+      var move = document.querySelectorAll("a.nav-move").length;
+      this.countDown == 0;
+      for(var i = 0; i < move; i++){
+        document.querySelectorAll("a.nav-move")[i].classList.remove('animate__animated', 'animate__fadeOutLeft')
+        document.querySelectorAll("a.nav-move")[i].classList.add('animate__animated', 'animate__fadeInLeft')
+      }
+      
+      if(this.show){
+        this.show = !this.show;
+      }
     }
 
   }
@@ -47,7 +68,7 @@ export class NavBarComponent implements OnInit {
 
   showLoginForm()
   {
-    this.countDown =+ 5000;
+    this.countDown += 5000;
     var move = document.querySelectorAll("a.nav-move").length;
 
     for(var i = 0; i < move; i++){
@@ -63,10 +84,17 @@ export class NavBarComponent implements OnInit {
         document.querySelectorAll("a.nav-move")[i].classList.remove('animate__animated', 'animate__fadeOutLeft')
         document.querySelectorAll("a.nav-move")[i].classList.add('animate__animated', 'animate__fadeInLeft')
     }
+    this.countDown = 0;
       this.show = !this.show;
-      this.countDown == 0;
+     
     }, this.countDown);
 
   }
 
+
+  hideMenu() {
+
+    document.getElementById("myClickMenu")?.click();
+  }
+  
 }

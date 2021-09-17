@@ -11,7 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SliderComponent } from './slider/slider.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

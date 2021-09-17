@@ -13,7 +13,7 @@
             <a class="nav-link active nav-move" aria-current="page" href="#" >Home</a>
           </li>
           <li  class="nav-item">
-            <a class="nav-link nav-move" href="#features-page " >Category</a>
+            <a class="nav-link nav-move" href="#features-page " >Services</a>
           </li>
           <li  class="nav-item">
             <a class="nav-link nav-move" href="#contact-page" >Contact Us</a>
@@ -23,10 +23,10 @@
           </li>
   
         </ul>
-        <form class="d-flex" *ngIf="show">
-          <input class="form-control me-2" type="username" placeholder="username" aria-label="Search">
-          <input class="form-control me-2" type="password" placeholder="password" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Login</button>
+        <form class="d-flex" *ngIf="show" #form="ngForm" novalidate>
+          <input class="form-control me-2" type="name" placeholder="username" aria-label="Search"  required>
+          <input class="form-control me-2" type="password" placeholder="password" aria-label="Search" required>
+          <button class="btn btn-outline-success" type="submit" [disabled]="form.invalid">Login</button>
         </form>
       </div>
     </div>

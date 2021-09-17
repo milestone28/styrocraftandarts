@@ -25,3 +25,5 @@ animation-fill-mode: forwards;
 .container:hover .caption {
   opacity: 1;
 }
+
+#more {display: none;}
